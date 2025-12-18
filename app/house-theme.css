@@ -1,0 +1,104 @@
+/* ===========================================
+   HOUSE THEME UPGRADE
+   Automatically styles all pages based on user house
+=========================================== */
+
+/* ---------- GLOBAL STYLE BOOST ---------- */
+body[class^="house-"] {
+    transition: background 0.4s ease-in-out, box-shadow 0.3s;
+}
+
+/* ======= GRYFFINDOR ======= */
+
+body.house-gryffindor {
+    background: url('/hogwarts/assets/backgrounds/gryffindor-room.jpg') center/cover fixed !important;
+}
+
+.house-gryffindor {
+    background: url('/hogwarts/assets/backgrounds/gryffindor-room.jpg') center/cover fixed !important;
+
+}
+
+.house-gryffindor .magic-title,
+.house-gryffindor h1,
+.house-gryffindor .profile-title {
+    color: #ffdd67;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+.house-gryffindor .scroll-box,
+.house-gryffindor .profile-card,
+.house-gryffindor .welcome-card {
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 25px #ff3300;
+}
+
+/* ======= SLYTHERIN ======= */
+body.house-slytherin {
+    background: url('/hogwarts/assets/backgrounds/slytherin-room.jpg') center/cover fixed !important;
+}
+
+.house-slytherin {
+    background: url('/hogwarts/assets/backgrounds/slytherin-room.jpg') center/cover fixed !important;
+
+}
+
+.house-slytherin .magic-title,
+.house-slytherin h1,
+.house-slytherin .profile-title {
+    color: #9affb4;
+    text-shadow: 0 0 15px #00ff88;
+}
+
+.house-slytherin .scroll-box,
+.house-slytherin .profile-card,
+.house-slytherin .welcome-card {
+    border: 3px solid #2aff4a;
+    box-shadow: 0 0 25px #00ff88;
+}
+
+/* ======= RAVENCLAW ======= */
+body.house-ravenclaw {
+    background: url('/hogwarts/assets/backgrounds/ravenclaw-room.jpg') center/cover fixed !important;
+}
+
+.house-ravenclaw {
+    background: url('/hogwarts/assets/backgrounds/ravenclaw-room.jpg') center/cover fixed !important;
+}
+
+.house-ravenclaw .magic-title,
+.house-ravenclaw h1,
+.house-ravenclaw .profile-title {
+    color: #8ecaff;
+    text-shadow: 0 0 15px #005bff;
+}
+
+.house-ravenclaw .scroll-box,
+.house-ravenclaw .profile-card,
+.house-ravenclaw .welcome-card {
+    border: 3px solid #005bff;
+    box-shadow: 0 0 25px #338aff;
+}
+
+/* ======= HUFFLEPUFF ======= */
+body.house-hufflepuff {
+    background: url('/hogwarts/assets/backgrounds/hufflepuff-room.jpg') center/cover fixed !important;
+}
+.house-hufflepuff {
+    background: url('/hogwarts/assets/backgrounds/hufflepuff-room.jpg') center/cover fixed !important;
+}
+
+.house-hufflepuff .magic-title,
+.house-hufflepuff h1,
+.house-hufflepuff .profile-title {
+    color: #ffeb7f;
+    text-shadow: 0 0 15px #ffbf00;
+}
+
+.house-hufflepuff .scroll-box,
+.house-hufflepuff .profile-card,
+.house-hufflepuff .welcome-card {
+    border: 3px solid #ffcc00;
+    box-shadow: 0 0 25px #ffbf00;
+}
+

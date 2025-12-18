@@ -1,0 +1,15 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const candleCount = 20;
+    const container = document.body;
+
+    for (let i = 0; i < candleCount; i++) {
+        const candle = document.createElement("img");
+        candle.src = "/assets/animations/floating-candle.png";
+        candle.classList.add("candle");
+        candle.style.left = Math.random() * 100 + "%";
+        candle.style.top = Math.random() * 100 + "%";
+        candle.style.animationDuration = (5 + Math.random() * 5) + "s";
+        container.appendChild(candle);
+    }
+});
+

@@ -1,0 +1,34 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Default page title
+$pageTitle = isset($pageTitle) ? $pageTitle : 'Hogwarts Portal';
+
+// Determine body class
+$bodyClass = "";
+
+// Apply house theme ONLY if NOT disabled on this page
+// Dashboard and Login will set: $pageNoHouseTheme = true;
+if (!isset($pageNoHouseTheme) && isset($_SESSION['user_id']) && isset($_SESSION['house'])) {
+    $bodyClass = "house-" . strtolower($_SESSION['house']);
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?= htmlspecialchars($pageTitle) ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="/hogwarts/styles.css">
+
+    <!-- House Themes -->
+    <link rel="stylesheet" href="/hogwarts/house-theme.css">
+</head>
+
+<body class="<?= $bodyClass ?>">
+<div class="container">
+

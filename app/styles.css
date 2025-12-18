@@ -1,0 +1,474 @@
+/* =================== GLOBAL PAGE =================== */
+
+body {
+    background: url('/hogwarts/assets/backgrounds/hogwarts-night.jpg') center/cover no-repeat fixed;
+    font-family: "Cinzel", serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Title */
+.magical-title {
+    font-size: 42px;
+    color: gold;
+    text-shadow: 0 0 20px gold;
+    margin-top: 40px;
+}
+
+
+/* =================== SCROLL FRAME =================== */
+
+.scroll-box {
+    width: 950px;
+    margin: 40px auto;
+    padding: 140px 40px;  /* These values CENTER content inside your 1536x1024 scroll */
+    background: url('/hogwarts/assets/images/scroll-frame.png') center/contain no-repeat;
+}
+
+/* =================== FORM ELEMENTS =================== */
+
+.scroll-input {
+    width: 50%;
+    height: 42px;
+    font-size: 18px;
+    margin: 18px auto;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid gold;
+    padding-left: 12px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.scroll-input:focus {
+    box-shadow: 0 0 12px #ffd45a;
+    outline: none;
+}
+
+label {
+    font-size: 18px;
+    color: gold;
+    text-shadow: 0 0 5px #000;
+}
+
+
+/* =================== BUTTON =================== */
+
+.magic-btn {
+    width: 220px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #E4B31A, #FFD45A);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 25px auto;
+    display: block;
+    text-align: center;
+    box-shadow: 0 0 15px gold;
+    transition: 0.2s ease-in-out;
+}
+
+.magic-btn:hover {
+    box-shadow: 0 0 25px #fff7b1;
+    transform: scale(1.05);
+}
+
+/* =================== REGISTER LINK =================== */
+
+.scroll-link {
+    color: gold !important;
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+}
+/* Ensure floating candles appear above everything */
+.candle {
+    position: absolute !important;
+    z-index: 999999 !important;
+    width: 45px;
+    pointer-events: none;
+    animation-name: floatUpDown;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Candle floating animation */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 0.7;
+    }
+}
+
+/* =================== HOUSE SELECT (INLINE STYLE) =================== */
+
+.house-select {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;     /* <-- horizontal */
+    justify-content: center; /* <-- center items */
+    align-items: center;
+    gap: 35px;               /* spacing between houses */
+    font-size: 18px;
+}
+
+.house-select label {
+    color: gold;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;     /* prevents text breaking in next line */
+}
+
+.house-select input[type="radio"] {
+    transform: scale(1.4);
+    margin-right: 8px;
+}
+
+/* ================= MODERN MAGIC DASHBOARD ================= */
+
+.magic-dashboard {
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+    position: relative;
+}
+
+/* Navigation Bar */
+.magic-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.magic-nav a {
+    font-size: 18px;
+    color: #8EE6FF;
+    text-shadow: 0 0 10px #8EE6FF;
+    transition: 0.2s;
+}
+
+.magic-nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #00eaff;
+    transform: scale(1.1);
+}
+
+/* Logout button (red glow) */
+.logout-btn {
+    color: #ff6b6b !important;
+    text-shadow: 0 0 10px #ff6b6b;
+}
+
+.logout-btn:hover {
+    text-shadow: 0 0 20px #ff3b3b;
+    transform: scale(1.1);
+}
+
+/* House Badge */
+.house-badge img {
+    width: 180px;
+    filter: drop-shadow(0 0 25px #00eaff);
+    animation: floatBadge 4s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Neon title */
+.neon-title {
+    font-size: 42px;
+    color: #72F5FF;
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 20px #00eaff,
+        0 0 40px #00eaff;
+}
+
+/* Welcome Card */
+.welcome-card {
+    margin-top: 20px;
+    background: rgba(0,0,0,0.45);
+    border: 2px solid #00eaff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.house-text {
+    font-size: 26px;
+    color: #FFD86B;
+    text-shadow: 0 0 10px #ffd86b;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #cce7ff;
+}
+
+.magic-spark {
+    position: fixed;
+    background: #00eaff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #00eaff;
+    animation: sparkle 4s linear infinite;
+}
+
+@keyframes sparkle {
+    0% { transform: translateY(0px); opacity: 1; }
+    100% { transform: translateY(-120px); opacity: 0; }
+}
+
+/* ================= PROFILE PAGE ================= */
+
+.profile-container {
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.profile-title {
+    font-size: 38px;
+    color: #72F5FF;
+    text-shadow: 0 0 18px #00eaff;
+}
+
+.profile-card {
+    width: 420px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0,0,0,0.45);
+    border: 2px solid #00eaff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.profile-house-badge {
+    width: 160px;
+    animation: floatBadge 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px #00ffff);
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 30px;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
+
+.profile-btn {
+    display: block;
+    width: 70%;
+    margin: 12px auto;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #E4B31A, #FFD45A);
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.profile-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 15px #ffe48c;
+}
+
+.profile-btn.secondary {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid #fff;
+}
+/* ===== GLOW UPGRADE ===== */
+.house-badge img {
+    width: 160px;
+    animation: floatBadge 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px white);
+}
+
+@keyframes floatBadge {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+.dashboard-house-badge {
+    width: 180px;
+    display: block;
+    margin: 20px auto;
+    filter: drop-shadow(0 0 12px gold);
+}
+.welcome-card .magic-btn {
+    margin-top: 20px;
+    width: 240px;
+    text-align: center;
+}
+
+/* Common Room Badge */
+.house-badge {
+    text-align: center;
+    margin-top: 20px;
+}
+.house-badge img {
+    width: 160px;
+    animation: floatCrest 4s infinite ease-in-out;
+    filter: drop-shadow(0 0 10px gold);
+}
+
+@keyframes floatCrest {
+    50% { transform: translateY(-12px); }
+}
+
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: rgba(0,0,0,0.55);
+    border: 2px solid gold;
+    padding: 20px 30px;
+    font-size: 20px;
+    color: gold;
+    text-align: center;
+    border-radius: 12px;
+    min-width: 180px;
+    box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.admin-actions button {
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid gold;
+  color: gold;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 14px;
+}
+
+.admin-actions button:hover {
+  background: gold;
+  color: #000;
+  box-shadow: 0 0 15px gold;
+}
+/* 🏰 Hogwarts Branding */
+.hogwarts-brand {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hogwarts-logo {
+    width: 140px;
+    filter: drop-shadow(0 0 15px gold);
+    animation: glowPulse 4s infinite;
+}
+
+@keyframes glowPulse {
+    0%   { filter: drop-shadow(0 0 10px gold); }
+    50%  { filter: drop-shadow(0 0 25px gold); }
+    100% { filter: drop-shadow(0 0 10px gold); }
+}
+/* 🏰 Headmaster Seal */
+.admin-seal {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+
+.admin-seal img {
+    width: 180px;          /* 👈 controls size */
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 25px rgba(255, 200, 80, 0.7));
+    animation: sealGlow 4s ease-in-out infinite;
+}
+
+/* ✨ subtle magical glow */
+@keyframes sealGlow {
+    0%   { filter: drop-shadow(0 0 15px rgba(255,200,80,0.5)); }
+    50%  { filter: drop-shadow(0 0 30px rgba(255,200,80,0.9)); }
+    100% { filter: drop-shadow(0 0 15px rgba(255,200,80,0.5)); }
+}
+/* ✍️ Magic Quill */
+.register-wrapper {
+    position: relative;
+}
+
+.magic-quill {
+    position: absolute;
+    top: 120px;
+    left: -60px;
+    width: 80px;
+    opacity: 0.9;
+    pointer-events: none;
+    transition: transform 0.3s ease, top 0.3s ease;
+}
+
+/* Move quill when typing */
+.scroll-input:focus ~ .magic-quill {
+    transform: rotate(-8deg) translateX(10px);
+}
+
+/* 🪄 Global Magic Wand Cursor */
+body {
+    cursor: url('/hogwarts/assets/icons/wand-cursor.png') 8 2, auto;
+}
+
+/* Ensure clickable elements feel interactive */
+a, button, input, label {
+    cursor: pointer;
+}
+
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    color: gold;
+    border: 2px solid gold;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 0 15px gold;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px gold;
+}
+
